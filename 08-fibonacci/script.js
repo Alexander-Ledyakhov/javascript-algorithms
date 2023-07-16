@@ -9,14 +9,14 @@
 */
 
 function fibonacci(n) {
-    let a = 0;
-    let b = 1;
+    let numberFibonacciA = 0;
+    let numberFibonacciB = 1;
     for (let i = 2; i <= n; i++) {
-        let c = a + b;
-        a = b;
-        b = c;
+        const numberFibonacciC = numberFibonacciA + numberFibonacciB;
+        numberFibonacciA = numberFibonacciB;
+        numberFibonacciB = numberFibonacciC;
     }
-    return a;
+    return numberFibonacciA;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

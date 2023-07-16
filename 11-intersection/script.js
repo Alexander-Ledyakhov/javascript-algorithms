@@ -8,7 +8,7 @@
 */
 
 function intersection(arr1, arr2) {
-    let newArr = [];
+    const newArr = [];
     for(const i of arr2) {
         if ((arr1.includes(i) == true) && (newArr.includes(i) == false)) newArr.push(i);
     }
