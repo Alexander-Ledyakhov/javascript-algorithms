@@ -6,8 +6,22 @@
  * 
 */
 
+
+function isPrime(n) {
+    if (n <= 1) return false;
+    if (n == 2) return true;
+    for(let i = 2; i < n; i++){
+        if(n % i == 0) return false;
+    }
+    return true
+}
+
 function primes(num) {
-    // Напишите код здесь
+    const arr = []
+    for (let i = 0; i <= num; i++) {
+        if (isPrime(i)) arr.push(i);
+    }
+    return arr
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

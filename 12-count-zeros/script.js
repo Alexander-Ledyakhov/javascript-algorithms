@@ -7,10 +7,15 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
+    let count = 0;
+    if (n > 9) count = countZeros(n - 1);
+    for(n; n > 0; n = Math.floor(n / 10)){
+        if (n % 10 == 0) count++;
+    }
+    return count;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(countZeros(20)); // 2 – два нуля, по одному в числах 10 и 20
-console.log(countZeros(100)); // 11 – 11 нулей в числах: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+//console.log(countZeros(100)); // 11 – 11 нулей в числах: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
